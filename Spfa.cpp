@@ -5,10 +5,10 @@
 
 using namespace std;
 
-const int MAXN = 1000;
-const int MAXM = 2000;
-struct Struct{
-
+const int MAXN = 10000;
+const int MAXM = 10006;
+struct Struct
+{
     int to;
     int len;
     Struct(){}
@@ -60,7 +60,8 @@ bool spfa(int beg) {
 
 int main() {
 
-    cin >> N >> M >> beg;
+    cin >> N >> M;
+    beg = 1;
     for (int i = 0; i < M; i++) {
 
         int a, b, c;
@@ -75,8 +76,8 @@ int main() {
         return 0;
     }
 
-    for (int i = 1; i <= N; i++)
-        cout << dis[i] << ' ';
+    for (int i = 2; i <= N; i++)
+        cout << dis[i] << endl;
 
     return 0;
 }
